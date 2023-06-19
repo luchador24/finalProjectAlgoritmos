@@ -1,0 +1,301 @@
+SubProceso salud(nombres, dpi, numas, numper, cont1, nombres2, dpi2, numas2, numper2, cont2, nombres3, dpi3, numas3, numper3, cont3, nombresR, dpiR, numasR, numperR, temperaturaR, cont, nombresG, dpiG, numperG, contG)
+	Repetir
+		Limpiar Pantalla
+		Escribir "1. Salir";
+		Escribir "2. Centro de Salud";
+		Escribir Sin Saltar "Ingrese el número de la opción a realizar: ";
+		Leer op;
+		Segun op Hacer
+			2:
+				Repetir 
+					Limpiar Pantalla
+					Escribir Sin Saltar "Ingrese la constraseña: ";
+					Leer constraseña;
+					Escribir Sin Saltar "¿Desea Salir?"
+					Leer bye;
+				Hasta Que (constraseña=123)
+				Si (bye="SI" O bye="si" O bye="Si" O bye="sI") Entonces
+					Limpiar Pantalla
+					Escribir "Gracias por utilizar el programa Kg22";
+				Sino
+					Repetir 
+						Limpiar Pantalla
+						Escribir "1. Inspección en el Cine";
+						Escribir "2. Inspección en el Restaurante";
+						Escribir "3. Inspección en el Gimnacio";
+						Escribir "4. Salir";
+						Escribir Sin Saltar "Ingrese el número de la opción a realizar: ";
+						Leer insp;
+						Segun insp Hacer
+							1:
+								Limpiar Pantalla
+								Escribir "Datos del Cine";
+								Escribir "1. Sala_1";
+								Escribir "2. Sala_2";
+								Escribir "3. Sala_3";
+								Escribir Sin Saltar "Ingrese el número de la sala a inspeccionar: ";
+								Leer numsala;
+								Segun numsala Hacer
+									1:
+										Repetir
+											Si numper = 0 Entonces
+												Limpiar Pantalla
+												Escribir "Ninguna persona ha asistido";
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											Sino
+												Limpiar Pantalla
+												Para i=1 Hasta cont1 Hacer
+													Escribir "Número de asciento: ", numas[i];
+													Escribir "Nombre: ", nombres[i];
+													Escribir "Número de DPI: ", dpi[i];
+													Escribir " ";
+												FinPara
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											FinSi
+										Hasta Que (bye="SI" O bye="si" O bye="Si" O bye="sI")
+									2:
+										Repetir
+											Si numper2 = 0 Entonces
+												Limpiar Pantalla
+												Escribir "Ninguna persona ha asistido";
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											Sino
+												Limpiar Pantalla
+												Para i=1 Hasta cont2 Hacer
+													Escribir "Número de asciento: ", numas2[i];
+													Escribir "Nombre: ", nombres2[i];
+													Escribir "Número de DPI: ", dpi2[i];
+													Escribir " ";
+												FinPara
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											FinSi
+										Hasta Que (bye="SI" O bye="si" O bye="Si" O bye="sI")
+									3:
+										Repetir
+											Si numper3 = 0 Entonces
+												Limpiar Pantalla
+												Escribir "Ninguna persona ha asistido";
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											Sino
+												Limpiar Pantalla
+												Para i=1 Hasta cont3 Hacer
+													Escribir "Número de asciento: ", numas3[i];
+													Escribir "Nombre: ", nombres3[i];
+													Escribir "Número de DPI: ", dpi3[i];
+													Escribir " ";
+												FinPara
+												Escribir Sin Saltar "¿Desea Salir? ";
+												Leer bye;
+											FinSi
+										Hasta Que (bye="SI" O bye="si" O bye="Si" O bye="sI")
+								FinSegun
+							2:
+								Repetir
+									Si numperR = 0 Entonces
+										Limpiar Pantalla
+										Escribir "Ninguna persona ha asistido";
+										Escribir Sin Saltar "¿Desea Salir? ";
+										Leer bye;
+									Sino
+										Limpiar Pantalla
+										Escribir "-------NIVELES DE TEMPERATURA-------";
+										Escribir "1=35 grados, 2=36 grados, 3=37 grados";
+										Escribir "4=38 grados, 5=39 grados, 6=40 grados";
+										Escribir "0= a <=34 grados";
+										Escribir "-------------------------------------";
+										Para i=1 Hasta cont Hacer
+											Escribir "Número de mesa: ", numasR[i];
+											Escribir "Nombres: ", nombresR[i];
+											Escribir "Número de DPI: ", dpiR[i];
+											Escribir "Tiene una temperatura de: ", temperaturaR[i];
+											Escribir " ";
+										FinPara
+										Escribir Sin Saltar "¿Desea Salir? ";
+										Leer bye;
+									FinSi
+								Hasta Que (bye="SI" O bye="si" O bye="Si" O bye="sI")
+							3:
+								Repetir
+									Si numperG = 0 Entonces
+										Limpiar Pantalla
+										Escribir "Ninguna persona ha asistido";
+										Escribir Sin Saltar "¿Desea Salir? ";
+										Leer bye;
+									Sino
+										Limpiar Pantalla
+										Para i=1 Hasta contG Hacer
+											//Escribir "Número de asciento: ", numasG[i];
+											Escribir "Nombre: ", nombresG[i];
+											Escribir "Número de Membresia: ", dpiG[i];
+											Escribir " ";
+										FinPara
+										Escribir Sin Saltar "¿Desea Salir? ";
+										Leer bye;
+									FinSi
+								Hasta Que (bye="SI" O bye="si" O bye="Si" O bye="sI")
+						FinSegun
+					Hasta Que  (insp=4)
+					Limpiar Pantalla
+					Escribir "Gracias por utilizar el programa Kg22";
+				FinSi
+		FinSegun
+	Hasta Que op=1
+	Limpiar Pantalla
+	Escribir "Gracias por utilizar el programa Kg20";
+FinSubProceso
+
+
+Algoritmo sin_titulo
+	Dimension nombresR[20], dpiR[20], numasR[20], temperaturaR[20];
+	Dimension nombres[20], dpi[20], numas[20];
+	Dimension nombres2[20], dpi2[20], numas2[20];
+	Dimension nombres3[20], dpi3[20], numas3[20];
+	Dimension nombresG[10], dpiG[10];
+	Repetir
+		Limpiar Pantalla
+		Escribir "*****Menú de opciones*****";
+		Escribir "1. Cine";
+		Escribir "2. Restaurante";
+		Escribir "3. Gimnacio";
+		Escribir "4. Salir";
+		Escribir Sin Saltar "Ingrese el número de opción a realizar: ";
+		Leer opcionn;
+		Segun opcionn Hacer
+			1:
+				Repetir
+					Limpiar Pantalla
+					Escribir "*****Bienvenido al Cine*****";
+					Escribir "---------Cartelera----------";
+					Escribir "1. El caballero de la noche";
+					Escribir "2. Cars 3";
+					Escribir "3. Hasta el último soldado";
+					Escribir "4. Salir"; 
+					Escribir Sin Saltar "Ingrese el número de la pelicula a visualizar: ";
+					Leer opcionn2
+					Segun opcionn2 Hacer
+						1:
+							Repetir 
+								Limpiar Pantalla
+								Escribir "      ***** Bienvenido a la SALA_1 *****";
+								Escribir "--------- Máximo de 20 personas -------";
+								Escribir "Ingrese el número de personas que desean asistir";
+								Leer numper;
+							Hasta Que numper<=20
+							Para i=1 Hasta numper Hacer
+								num=num+5
+								Si cont1<=19 Y num<=100 Entonces
+									cont1=cont1+1;
+									numas[cont1]=num
+									Escribir "El número del asciento es: ", numas[cont1];
+									Escribir Sin Saltar "Nombre de la persona no.", cont1, ": ";
+									Leer nomper;
+									nombres[cont1]=nomper;
+									Escribir Sin Saltar "Número de DPI de la persona ", nomper,": ";
+									Leer dpiper;
+									dpi[cont1]=dpiper;
+									Escribir " ";
+								FinSi
+							FinPara
+						2:
+							Repetir 
+								Limpiar Pantalla
+								Escribir "      ***** Bienvenido a la SALA_2 *****";
+								Escribir "--------- Máximo de 20 personas -------";
+								Escribir "Ingrese el número de personas que desean asistir";
+								Leer numper2;
+							Hasta Que numper2<=20
+							Para i=1 Hasta numper2 Hacer
+								num2=num2+5
+								Si cont2<=19 Y num2<=100 Entonces
+									cont2=cont2+1;
+									numas2[cont2]=num2
+									Escribir "El número del asciento es: ", numas2[cont2];
+									Escribir Sin Saltar "Nombre de la persona no.", cont2, ": ";
+									Leer nomper2;
+									nombres2[cont2]=nomper2;
+									Escribir Sin Saltar "Número de DPI de la persona ", nomper2,": ";
+									Leer dpiper2;
+									dpi2[cont2]=dpiper2;
+									Escribir " ";
+								FinSi
+							FinPara
+						3:
+							Repetir 
+								Limpiar Pantalla
+								Escribir "      ***** Bienvenido a la SALA_3 *****";
+								Escribir "--------- Máximo de 20 personas -------";
+								Escribir "Ingrese el número de personas que desean asistir";
+								Leer numper3;
+							Hasta Que numper3<=20
+							Para i=1 Hasta numper3 Hacer
+								num3=num3+5
+								Si cont3<=19 Y num3<=100 Entonces
+									cont3=cont3+1;
+									numas3[cont3]=num3
+									Escribir "El número del asciento es: ", numas3[cont3];
+									Escribir Sin Saltar "Nombre de la persona no.", cont3, ": ";
+									Leer nomper3;
+									nombres3[cont3]=nomper3;
+									Escribir Sin Saltar "Número de DPI de la persona ", nomper3,": ";
+									Leer dpiper3;
+									dpi3[cont3]=dpiper3;
+									Escribir " ";
+								FinSi
+							FinPara
+					FinSegun
+				Hasta Que opcionn2=4
+			2:
+				Repetir 
+					Limpiar Pantalla
+					Escribir "  ************* Bienvenido al Restaurante **************";
+					Escribir "-------- Máximo de 20 Personas En El Restaurante--------";
+					Escribir "-------------Máximo de 5 personas por mesa--------------";
+					Escribir "Ingrese el número de persona que desean asistir Por mesa";
+					Leer numperR;
+				Hasta Que numperR<=5
+				numR=numR+2
+				Para i=1 Hasta numperR Hacer
+					Si cont<=19 Y numR<=20 Entonces
+						cont=cont+1;
+						numasR[cont]=numR
+						Escribir "El número de la mesa es: ", numasR[cont];
+						Escribir Sin Saltar "Nombre de la persona no.", cont, ": ";
+						Leer nomper;
+						nombresR[cont]=nomper;
+						Escribir Sin Saltar "Número de DPI de la persona ", nomper,": ";
+						Leer dpiper;
+						dpiR[cont]=dpiper;
+						temperaturaR[cont]= azar(6);
+						Escribir " ";
+					FinSi
+				FinPara
+			3:
+				
+				Repetir 
+					Limpiar Pantalla
+					Escribir "  ************ Bienvenido al Gimnacio Kg22 *************";
+					Escribir "----------Máximo de 10 Personas En El Gimnacio----------";
+					Escribir "Ingrese el número de persona que desean asistir.";
+					Leer numperG;
+				Hasta Que numperG<=10
+				Para i=1 Hasta numperG Hacer
+					Si contG<=9 Entonces
+						contG=contG+1;
+						Escribir Sin Saltar "Nombre de la persona no.", contG, ": ";
+						Leer nomperG;
+						nombresG[contG]=nomperG;
+						Escribir Sin Saltar "Número de Membresia de la persona ", nomperG,": ";
+						Leer dpiperG;
+						dpiG[contG]=dpiperG;
+						Escribir " ";
+					FinSi
+				FinPara
+		FinSegun
+	Hasta Que opcionn=4
+	salud(nombres, dpi, numas, numper, cont1, nombres2, dpi2, numas2, numper2, cont2, nombres3, dpi3, numas3, numper3, cont3, nombresR, dpiR, numasR, numperR, temperaturaR, cont, nombresG, dpiG, numperG, contG)
+FinAlgoritmo
